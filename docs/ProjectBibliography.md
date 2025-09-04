@@ -33,3 +33,24 @@ Craigslist acts as an online ad driven website that has a wide range of categori
 
 **Relevance & Commentary:**  
 This platform excels through its diverse categorization and simplicity. Nevertheless, it is an outdated platform that has change very little since its launch and has few safety features to protect users. My Hanover Marketplace could solve the safety and security features of this flatform while also learning from its categorical abilities.  
+
+
+
+## 3. OfferUp
+
+**Link:** [https://offerup.com](https://offerup.com)
+
+**Source Type:**  
+This source is a primary site that puts an emphasis on mobility  
+
+**Relation to App:**  
+This is a competitive and similar program that shows off a more modern and mobile-user friendly design.  
+
+**Summary:**  
+OfferUp is a mobile app for buyers and sellers to find goods locally. It is similar to the other sources that I have listed but is designed around convenience for mobile users. Rather than the plain text heavy listings found on Craigslist, OfferUp listings are centered around pictures of the items.  
+
+**Relevance & Commentary:**  
+OfferUp is an example of a strong app based platform designed for mobile use and displays the importance of making a visually appealing and easy to use platform. However, OfferUp also struggles with trust, anonimity, and other security issues. I believe that integrating a picture based listing would be benificial, thought security improvements could be made through the use of Hanover emails and or other identity verification methods.  
+
+
+
