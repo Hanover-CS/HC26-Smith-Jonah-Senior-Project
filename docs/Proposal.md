@@ -1,4 +1,5 @@
 ---
+title: Project Proposal
 ---
 # Hanover Community Marketplace Platform
 

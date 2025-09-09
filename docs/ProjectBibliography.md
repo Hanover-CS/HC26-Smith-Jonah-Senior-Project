@@ -1,4 +1,5 @@
 ---
+title: Bibliography
 ---
 # Annotated Bibliography
 
