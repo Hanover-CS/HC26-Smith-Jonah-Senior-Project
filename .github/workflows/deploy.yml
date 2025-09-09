@@ -26,4 +26,5 @@ jobs:
 
       - name: upload page artifact
         uses: actions/upload-pages-artifact@v3
-        working-directory: ./docs/_site
+        with: 
+          - path: ./docs/_site
