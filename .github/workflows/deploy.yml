@@ -1,0 +1,29 @@
+name: Pages deploy
+on: 
+  push:
+    branches:
+      - main
+jobs: 
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: set up ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      - name: install dependencies (jekyll)
+        working-directory: ./docs
+        run: bundle install
+
+      - name: build jekyll
+        working-driectory: ./docs
+        run: bundle exec jekyll build
+
+      - name: upload page artifact
+        working-directory: ./docs/_site
+        uses: actions/upload-pages-artifact@v3
