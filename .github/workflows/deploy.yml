@@ -28,3 +28,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with: 
           path: ./docs/_site
+
+  deploy-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy pages
+        uses: actions/deploy-pages@v4
