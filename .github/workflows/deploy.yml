@@ -21,9 +21,9 @@ jobs:
         run: bundle install
 
       - name: build jekyll
-        working-driectory: ./docs
+        working-directory: ./docs
         run: bundle exec jekyll build
 
       - name: upload page artifact
-        working-directory: ./docs/_site
         uses: actions/upload-pages-artifact@v3
+        working-directory: ./docs/_site
