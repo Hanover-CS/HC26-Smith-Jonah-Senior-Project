@@ -33,6 +33,37 @@ When compared to these examples, the Hanover Marketplace would be able to provid
 
 ---
 
+## Technologies
+
+There are two overarching sections of this project that need to be taken into consideration. The front end which the user will interact with, and the back end which takes care of all of the behind the scenes tasks. Thus, I will have these four sub-sections here for technologies; Things to learn, tools needed, front end, and back end. 
+
+**Things to Learn**
+- **I will need to learn how to structure a full stack web application and how to connect the front end, back end, and database.**
+- **I will have to learn how to impliment security features and authentication based on '@hanover.edu' email accounts.**
+- **I will need to impliment a form of image storing and handling for item listings**
+- **I will need to host and deploy a web application that can be accessed by others online**
+
+**Needed Tools**
+- ****
+- ****
+- ****
+- ****
+- ****
+
+**Front End**
+- ****
+- ****
+- ****
+
+**Back End**
+- ****
+- ****
+- ****
+- ****
+- ****
+- ****
+
+
 ## References
 [1] Facebook, *Facebook Marketplace*. [Online]. Avaliable: https://www.facebook.com/marketplace.
 
