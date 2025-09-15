@@ -38,30 +38,30 @@ When compared to these examples, the Hanover Marketplace would be able to provid
 There are two overarching sections of this project that need to be taken into consideration. The front end which the user will interact with, and the back end which takes care of all of the behind the scenes tasks. Thus, I will have these four sub-sections here for technologies; Things to learn, tools needed, front end, and back end. 
 
 **Things to Learn**
-- **I will need to learn how to structure a full stack web application and how to connect the front end, back end, and database.**
-- **I will have to learn how to impliment security features and authentication based on '@hanover.edu' email accounts.**
-- **I will need to impliment a form of image storing and handling for item listings**
-- **I will need to host and deploy a web application that can be accessed by others online**
+- I will need to learn how to structure a full stack web application and how to connect the front end, back end, and database.
+- I will have to learn how to impliment security features and authentication based on '@hanover.edu' email accounts.
+- I will need to impliment a form of image storing and handling for item listings
+- I will need to host and deploy a web application that can be accessed by others online
 
 **Needed Tools**
-- ****
-- ****
-- ****
-- ****
-- ****
+- **Version Control ([GitHub](https://github.com)):** Version control will be needed to track progress and also for managing the projects repository.
+- **IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/) or [Visual Studio Code](https://code.visualstudio.com/)):** These are two options that can be used for coding and debugging.
+- **Database Admin:** [pgAdmin](https://www.pgadmin.org/) can be used for PostgreSQL or SQLite browser tools.
+- **Hosting and Deployment ([Render](https://render.com/) or [Railway](https://railway.app/)):** Free tiers can be used to host Java web applications with databases.
+- **Image Hosting ([Cloudinary](https://cloudinary.com/)):** This is an example of a free to use service for storing and serving images for listings.
 
 **Front End**
-- ****
-- ****
-- ****
+- **Thymeleaf** ([thymeleaf.org](https://www.thymeleaf.org/)): This is a server-side template engine which can be used to generate HTML pages directly from Java backend data.
+- **Bootstrap** ([getbootstrap.com](https://getbootstrap.com/)): This is a CSS/JS library that provides layouts, navigation bars, cards, and forms which can help make the site appear more modern and mobile friendly without adding heavy amounts of design work.
+- **HTML5, CSS3, JavaScript:** These are standard web technologies that are used to style and build UI.
 
 **Back End**
-- ****
-- ****
-- ****
-- ****
-- ****
-- ****
+- **Java 19:** The core programming language.
+- **Spring Boot** ([spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)): This is a framework that makes building web applications more simple through its support for controllers, security, and embedded servers.
+- **Spring Security** ([spring.io/projects/spring-security](https://spring.io/projects/spring-security)): This provides a tool which can be used for authentication and access restriction, allowing only Hanover email accounts.
+- **Spring Data JPA** ([spring.io/projects/spring-data-jpa](https://spring.io/projects/spring-data-jpa)): This helps simplify database access through its use of repositories and automatic query generation.
+- **SQLite** ([sqlite.org](https://www.sqlite.org/)): This is a lightweight and file based database for development.
+- **PostgreSQL** ([postgresql.org](https://www.postgresql.org/)): This is a databse that is production ready and can be used for deployment, and it is supported by free hosting providers.
 
 
 ## References
