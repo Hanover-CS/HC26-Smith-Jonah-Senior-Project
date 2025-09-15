@@ -23,11 +23,11 @@ The aim for the platform would be to bring the convenience of existing online ma
 
 There are multiple existing platforms that have a variety of approaches to online marketplaces. Although they have their individual flaws, they have traits that can influence and improve the creation of a Hanover campus exclusive marketplace.
 
-- **Facebook Marketplace** [1]: This platform is tied to the social media profiles of the platform and excels in categorization and filtering. However, it has issues with scamming and shady behavior.
-- **Craigslist** [2]: This is a platform that has been around for a long time with little change. This leaves it with a dated design and interface as well as lacking security measures; however, it has a wide range of listing ability and browsing filters.
-- **OfferUp** [3]: This is a modern platform that is focused on mobile device users. Nevertheless, it also suffers from trust issues between buyers and sellers.
-- **VarageSale** [4]: This is a platform that focuses on community. It implements admin verification for joining members. Although this is an improvement for security, it is held back by its reliance on manual oversight rather than automated verification.
-- **University Buy and Sell Groups** [5]: This platform, and others like it, are secondary sources that are run on social media platforms like Facebook. This allows for the convenience of a small local marketplace, but suffers a similar administration issue as VarageSale and is reliant on third-party platforms.
+- **Facebook Marketplace** [1]: This platform is tied to the social media profiles of the platform and excels in categorization and filtering. However, it has issues with scamming and shady behavior.  
+- **Craigslist** [2]: This is a platform that has been around for a long time with little change. This leaves it with a dated design and interface as well as lacking security measures; however, it has a wide range of listing ability and browsing filters.  
+- **OfferUp** [3]: This is a modern platform that is focused on mobile device users. Nevertheless, it also suffers from trust issues between buyers and sellers.  
+- **VarageSale** [4]: This is a platform that focuses on community. It implements admin verification for joining members. Although this is an improvement for security, it is held back by its reliance on manual oversight rather than automated verification.  
+- **University Buy and Sell Groups** [5]: This platform, and others like it, are secondary sources that are run on social media platforms like Facebook. This allows for the convenience of a small local marketplace, but suffers a similar administration issue as VarageSale and is reliant on third-party platforms.  
 
 When compared to these examples, the Hanover Marketplace would be able to provide a standalone and campus-exclusive solution. It could also have a straightforward and streamlined design that focuses on ease of use.
 
@@ -35,7 +35,11 @@ When compared to these examples, the Hanover Marketplace would be able to provid
 
 ## Technologies
 
-There are two overarching sections of this project that need to be taken into consideration. The front end which the user will interact with, and the back end which takes care of all of the behind-the-scenes tasks. Thus, I will have these four sub-sections here for technologies; Things to learn, tools needed, front end, and back end. 
+The technologies section is divided into **four sub-sections**:  
+1. **Things to Learn** – new skills required to complete the project.  
+2. **Needed Tools** – software and services required for development and deployment.  
+3. **Front End** – the technologies that will build the user interface.  
+4. **Back End** – the technologies that will handle server-side logic, authentication, and database management.  
 
 **Things to Learn**
 - I will need to learn how to structure a full stack web application and how to connect the front end, back end, and database.
@@ -64,12 +68,12 @@ There are two overarching sections of this project that need to be taken into co
 - **PostgreSQL** ([postgresql.org](https://www.postgresql.org/)): This is a database that is production-ready and can be used for deployment, and it is supported by free hosting providers.
 
 ## References
-[1] Facebook, *Facebook Marketplace*. [Online]. Available: https://www.facebook.com/marketplace.
+[1] Facebook, *Facebook Marketplace*. [Online]. Available: https://www.facebook.com/marketplace.  
 
-[2] Craigslist, *Craigslist Official Site*. [Online]. Available: https://www.craigslist.org.
+[2] Craigslist, *Craigslist Official Site*. [Online]. Available: https://www.craigslist.org.  
 
-[3] OfferUp, *OfferUp Marketplace*. [Online]. Available: https://offerup.com.
+[3] OfferUp, *OfferUp Marketplace*. [Online]. Available: https://offerup.com.  
 
-[4] VarageSale, *VarageSale Community Marketplace*. [Online]. Available: https://www.varagesale.com.
+[4] VarageSale, *VarageSale Community Marketplace*. [Online]. Available: https://www.varagesale.com.  
 
-[5] Facebook, *Yale Free and For Sale Group*. [Online]. Available: https://www.facebook.com/groups/150454865086.
+[5] Facebook, *Yale Free and For Sale Group*. [Online]. Available: https://www.facebook.com/groups/150454865086.  
