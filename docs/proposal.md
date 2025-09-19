@@ -92,7 +92,7 @@ The technologies section is divided into **five sub-sections**:
 
 - **Hosting and Deployment ([Render](https://render.com/) or [Railway](https://railway.app/)):** These services allow free hosting for web applications and databases. Render would allow for automatic deployment whenever changes are pushed to the main GitHub branch. Railway also provides tools that simplify scalability. These resources would allow for the application to be accessible to real users while limiting the difficulty between development and deployment.
 
-- **Image Hosting ([Cloudinary](https://cloudinary.com/)):** Cloudinary gives developers free access to image handling, uploading, scaling, and delivery. It is effective at quick delivery and formatting for varying devices. Rather than storing images directly in the database, Cloudinary will handle storage in the cloud and return secure URLs, in turn reducing the size and complexity of the databse,
+- **Image Hosting ([Cloudinary](https://cloudinary.com/)):** Cloudinary gives developers free access to image handling, uploading, scaling, and delivery. It is effective at quick delivery and formatting for varying devices. Rather than storing images directly in the database, Cloudinary will handle storage in the cloud and return secure URLs, in turn reducing the size and complexity of the database,
 
 
 
@@ -120,7 +120,7 @@ The technologies section is divided into **five sub-sections**:
 
 - **SQLite** ([sqlite.org](https://www.sqlite.org/)): SQLite is a lightweight database that I can use during development and testing. It runs locally and does not need a server, which is ideal for quicker responses during development. It also allows for better experimentation and design before moving onto production.
 
-- **PostgreSQL** ([postgresql.org](https://www.postgresql.org/)): PostgreSQL is ideal for production and deployment due to its support if advanced queries, indexing for lookups, and is able to work alongside Render and Railway cost free. It is scalable, reliable, and ideal for a project that is intended for community use.
+- **PostgreSQL** ([postgresql.org](https://www.postgresql.org/)): PostgreSQL is ideal for production and deployment due to its support of advanced queries, indexing for lookups, and is able to work alongside Render and Railway cost free. It is scalable, reliable, and ideal for a project that is intended for community use.
 
 
 
@@ -143,7 +143,7 @@ For each core technology, alternatives were considered:
 ### Components and Connections
 The system architecture will have **three primary components**:  
 
-- **Front End (Thymeleaf, Bootstrap, HTML/CSS/JS):** The front end will take care of rendering pages that the user sees and interacts with. These pages will be interacted with directly when users are browsing, creating listings, managing profiles, and leaving reviews. By using Thymeleaf templates alongside Boostrap styling I can ensure that UI is responsive and friendly for all devices.
+- **Front End (Thymeleaf, Bootstrap, HTML/CSS/JS):** The front end will take care of rendering pages that the user sees and interacts with. These pages will be interacted with directly when users are browsing, creating listings, managing profiles, and leaving reviews. By using Thymeleaf templates alongside Bootstrap styling I can ensure that UI is responsive and friendly for all devices.
 
 - **Back End (Java 19, Spring Boot, Spring Security, JPA):** The back end will be in charge of handling authentication, logic, and requests. This will include validating access via Hanover emails as well as processing the creation and editing of listings. Spring Security will also ensure that sensitive actions (like posting items or reviews) can only be performed by verified users. 
 
