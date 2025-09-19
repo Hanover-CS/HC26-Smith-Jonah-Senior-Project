@@ -3,6 +3,6 @@ layout: default
 title: Tutorial
 ---
 
-This site hosts the image hosting tutorial
+This directory contians pages related to my tutorial for image hosting.
 
 - [Senior Project Tutorial](./projectTutorial.md)
