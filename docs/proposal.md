@@ -2,7 +2,7 @@
 layout: default
 title: Project Proposal
 ---
-# Hanover Community Marketplace Platform
+# Hanover College Marketplace (HCM) Platform
 
 ## Project Overview
 My proposed project is to develop an online marketplace which can only be accessed by Hanover students, faculty, and staff. It would allow users to buy, sell, and trade items such as textbooks, furniture, or electronics on a trustworthy and secure platform.
@@ -13,13 +13,13 @@ The aim of this platform is to combine the **convenience of existing online mark
 
 - **User Authentication:** Access to the Hanover Marketplace platform would be restricted to solely verified Hanover College email addresses. Doing so will ensure that only members of the campus community would be able to access the application, in turn creating a more secure and trustworthy marketplace. The increase in security and trust would derive from the thorough prevention of spam, phishing, or fake accounts from interacting on the site, in turn improving trust and accountability when buying or selling items. 
 
-- **Listings:** The listings on this web application would be picture-focused as opposed to being text heavy and unappealing. Listings will also be given numerous categories to ease the process of searching, browsing, and listing. Each listing will have images of the items in question, a brief description and statement of condition, as well as contact information. This will ensure that buyers have all the information they need about an item as well as contact information for the seller. 
+- **Listings:** The listings on this web application would be picture-focused as opposed to being text heavy and unappealing. Listings will also be given numerous categories to ease the process of searching, browsing, and listing. Each listing will have images of the items in question, a brief description and statement of condition, as well as contact information. This will ensure that buyers have all the information they need about an item as well as contact information for the seller. 
 
-- **Profiles and Reviews:** Each profile will be unique and attached to the Hanover community member's account. With this system in place buyers and sellers alike can build a rapport with their community, identifying and highlighting trustworthy and positive behavior.  
+- **Profiles and Reviews:** Each profile will be unique and attached to the Hanover community member's account. With this system in place buyers and sellers alike can build a rapport with their community, identifying and highlighting trustworthy and positive behavior.  
 
 - **Search and Filters/Categories:** There will be categories for listing and searching for items. These may include price or condition, or they could include more in-depth searches like textbooks (possibly filtered by major), furniture, etc.  
 
-- **Security and Safety:** Verification for the application could be completed autonomously through Hanover emails, relieving any need for admin observation and preventing fraudulent access. Other safety features could include suggested meeting locations on campus, suggestions for safe trading practices, reporting tools, etc. 
+- **Security and Safety:** Verification for the application could be completed autonomously through Hanover emails, relieving any need for admin observation and preventing fraudulent access. Other safety features could include suggested meeting locations on campus, suggestions for safe trading practices, reporting tools, etc. 
 
 - **Device Accessibility:** This application is intended to be accessible on both computers and mobile devices, and as such will need to be developed as a web application. Proper scaling of pages for mobile uses and UI considerations for mobile users would encourage the use of the application on more devices that just laptops and desktops. 
 
@@ -62,7 +62,7 @@ The technologies section is divided into **five sub-sections**:
 
 
 
-**1. Things to Learn:**
+**1. Things to Learn:**  
 
 - **Full-Stack Development:** I will need to learn how to structure a full stack web app by connecting the front end, back end, and database into one system. This will include learning how to process client-side requests and how they are returned by the server. 
 
@@ -78,15 +78,15 @@ The technologies section is divided into **five sub-sections**:
 
 - **Deployment and Hosting:** I will need to learn how to deploy a web app and how to connect it to a production-ready database.  
 
-- **Tools and Workflow:** I will need to learn how to use tools like **GitHub** version control, **pgAdmin**, and IDEs like **IntelliJ** or **VS Code** alongside one another in my project’s workflow.  
+- **Tools and Workflow:** I will need to learn how to use tools like **GitHub** version control, **pgAdmin**, and IDEs like **IntelliJ** alongside one another in my project’s workflow.  
 
 
 
-**2. Needed Tools:**
+**2. Needed Tools:**  
 
 - **Version Control ([GitHub](https://github.com)):** GitHub will be used for managing the project's repository, tracking progress on the project, and for maintaining version control. It will also keep a history of commits, allowing for possible rollback of changes if needed. It also allows for branching and merging, which can be used to experiment with changes that may be large or of a "make or break" quality. IT can also be used for running automated testing and maintaining progress reports of time spent and changes made.
 
-- **IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/) or [Visual Studio Code](https://code.visualstudio.com/)):** Both **IntelliJ** and **VS Code** are compatible with Java and Spring Boot. IntelliJ offers built-in tools for Spring Boot as well as database connections and Maven/Gradle builds. On the other hand, VS Code provides such services only through extensions. This makes VS Code more flexible but leaves it with a higher bar of entry. Regardless of the selected IDE it will be used for coding as well as debugging, adding plugins, and possibly running local servers.
+- **IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/)):** IntelliJ is compatible with Java and Spring Boot. It offers built-in tools for Spring Boot as well as database connections and Maven/Gradle builds. IntelliJ will be used for coding as well as debugging, adding plugins, and possibly running local servers.
 
 - **Database Admin ([pgAdmin](https://www.pgadmin.org/) or SQLite):** These tools will allow for visualization, queries, and management of databases. pgAdmin will be paired efficiently with PostgreSQL, allowing for inspection of tables, running queries, and will ensure continuity between the application and database. Earlier on in development SQLite can be used for more simple debugging.
 
@@ -96,7 +96,7 @@ The technologies section is divided into **five sub-sections**:
 
 
 
-**3. Front End:**
+**3. Front End:**  
 
 - **Thymeleaf** ([thymeleaf.org](https://www.thymeleaf.org/)): Thymeleaf allows for the deployment of HTML pages to be generated from data on the server-side. This could allow me to dynamically populate an item listing page with entries without the need for heavy front end frameworks. This, in turn, allows me to reuse templates across multiple pages.
 
@@ -108,13 +108,13 @@ The technologies section is divided into **five sub-sections**:
     - **JavaScript** will allow for interactivity like filtering listings and confirming actions (such as deleting a post of marking it as sold/pending)
 
 
-**4. Back End:**
+**4. Back End:**  
 
 - **Java 19:** This will be the core programming language. I chose this language because it integrates very well with Spring Boot and thus simplifies web development. Python or JavaScript could have been used; however, Java is heavily documented, more user friendly, and works directly with frameworks like Spring. This will ultimately reduce the already large learning curve for this project.  
 
 - **Spring Boot** ([spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)): This is a framework that makes building web applications simpler through its support for controllers, security, and embedded servers. I chose this because of its web development tools as well as its direct pairing with Spring Security and Spring Data JPA.  
 
-- **Spring Security** ([spring.io/projects/spring-security](https://spring.io/projects/spring-security)): This will play a key role in authenticating and authorizing people before entrance and during user interactions (like listing items or leaving reviews). It will allow access to be restricted to solely *@hanover,edu* accounts. The provided security features could include password hashing and giving admins different levels of control than standard users. 
+- **Spring Security** ([spring.io/projects/spring-security](https://spring.io/projects/spring-security)): This will play a key role in authenticating and authorizing people before entrance and during user interactions (like listing items or leaving reviews). It will allow access to be restricted to solely *@hanover,edu* accounts. The provided security features could include password hashing and giving admins different levels of control than standard users. 
 
 - **Spring Data JPA** ([spring.io/projects/spring-data-jpa](https://spring.io/projects/spring-data-jpa)): This would allow for the creation of methods being written as simple functions while the SQL is generated automatically. This would help me reduce the number of errors made during development.
 
@@ -124,8 +124,8 @@ The technologies section is divided into **five sub-sections**:
 
 
 
-**5. Alternative Technologies:**
-For each core technology, alternatives were considered: 
+**5. Alternative Technologies:**  
+For each core technology, alternatives were considered:  
 
 
 - **Front End:** While *React* [6] or *Angular* could provide more dynamic single-page applications, they would inherently increase the complexity of the project and steepen the overall learning curve. I selected **Thymeleaf** because it works alongside Spring Boot seamlessly, reducing the complexity of the project as well as the time needed for setup.  
@@ -140,28 +140,61 @@ For each core technology, alternatives were considered:
 
 
 
-### Components and Connections
+### Components and Connections  
 The system architecture will have **three primary components**:  
 
 - **Front End (Thymeleaf, Bootstrap, HTML/CSS/JS):** The front end will take care of rendering pages that the user sees and interacts with. These pages will be interacted with directly when users are browsing, creating listings, managing profiles, and leaving reviews. By using Thymeleaf templates alongside Bootstrap styling I can ensure that UI is responsive and friendly for all devices.
 
-- **Back End (Java 19, Spring Boot, Spring Security, JPA):** The back end will be in charge of handling authentication, logic, and requests. This will include validating access via Hanover emails as well as processing the creation and editing of listings. Spring Security will also ensure that sensitive actions (like posting items or reviews) can only be performed by verified users. 
+- **Back End (Java 19, Spring Boot, Spring Security, JPA):** The back end will be in charge of handling authentication, logic, and requests. This will include validating access via Hanover emails as well as processing the creation and editing of listings. Spring Security will also ensure that sensitive actions (like posting items or reviews) can only be performed by verified users. 
 
-- **Database (SQLite for development, PostgreSQL for deployment):** The database will handle the storage of important and sensitive data, including user accounts, item listings, and reviews. SQLite will provide a lightweight method of performing these actions during development and testing. PostgreSQL will be the database used for deployment of the web application as it is more scalable and robust. 
+- **Database (SQLite for development, PostgreSQL for deployment):** The database will handle the storage of important and sensitive data, including user accounts, item listings, and reviews. SQLite will provide a lightweight method of performing these actions during development and testing. PostgreSQL will be the database used for deployment of the web application as it is more scalable and robust. 
 
-- **Additional connections:**
-    - The **front end** will communicate with the **back end** through HTTP requests (like a new listing sending a POST request to the server).
-    - The **back end** will interact with the **database** through Spring Data JPA and will automatically translate Java into SQL queries.
+- **Additional connections:**  
+    - The **front end** will communicate with the **back end** through HTTP requests (like a new listing sending a POST request to the server).  
+    - The **back end** will interact with the **database** through Spring Data JPA and will automatically translate Java into SQL queries.  
     -  External services like **Cloudinary** (used for image hosting) will also integrate at this layer. This will ensure that uploaded images are stored securely while still remaining linked to their specific listings.
 
 ---
 
 ## References
-[1] Facebook, *Facebook Marketplace*. [Online]. Available: https://www.facebook.com/marketplace.  
-[2] Craigslist, *Craigslist Official Site*. [Online]. Available: https://www.craigslist.org.  
-[3] OfferUp, *OfferUp Marketplace*. [Online]. Available: https://offerup.com.  
-[4] VarageSale, *VarageSale Community Marketplace*. [Online]. Available: https://www.varagesale.com.  
-[5] Facebook, *Yale Free and For Sale Group*. [Online]. Available: https://www.facebook.com/groups/150454865086.  
-[6] React, *React Official Docs*. [Online]. Available: https://react.dev.  
-[7] MySQL, *MySQL Official Site*. [Online]. Available: https://www.mysql.com.  
-[8] Amazon, *AWS S3*. [Online]. Available: https://aws.amazon.com/s3.  
+[1] Facebook, “Facebook Marketplace,” Meta Platforms, [Online]. Available: https://www.facebook.com/marketplace. [Accessed: 29-Sep-2025].  
+
+[2] Craigslist, “Craigslist Official Site,” Craigslist Inc., [Online]. Available: https://www.craigslist.org. [Accessed: 29-Sep-2025].  
+
+[3] OfferUp, “OfferUp Marketplace,” OfferUp Inc., [Online]. Available: https://offerup.com. [Accessed: 29-Sep-2025].  
+
+[4] VarageSale, “VarageSale Community Marketplace,” VarageSale, [Online]. Available: https://www.varagesale.com. [Accessed: 29-Sep-2025].  
+
+[5] Facebook, “Yale Free and For Sale Group,” Facebook Groups, [Online]. Available: https://www.facebook.com/groups/150454865086. [Accessed: 29-Sep-2025].  
+
+[6] React, “React Official Docs,” Meta Platforms, [Online]. Available: https://react.dev. [Accessed: 29-Sep-2025].  
+
+[7] MySQL, “MySQL Official Site,” Oracle Corporation, [Online]. Available: https://www.mysql.com. [Accessed: 29-Sep-2025].  
+
+[8] Amazon, “Amazon S3,” Amazon Web Services, [Online]. Available: https://aws.amazon.com/s3. [Accessed: 29-Sep-2025].  
+
+[9] Pivotal/VMware, “Spring Boot,” Spring.io, [Online]. Available: https://spring.io/projects/spring-boot. [Accessed: 29-Sep-2025].  
+
+[10] Pivotal/VMware, “Spring Security,” Spring.io, [Online]. Available: https://spring.io/projects/spring-security. [Accessed: 29-Sep-2025].  
+
+[11] Pivotal/VMware, “Spring Data JPA,” Spring.io, [Online]. Available: https://spring.io/projects/spring-data-jpa. [Accessed: 29-Sep-2025].  
+
+[12] Thymeleaf, “Thymeleaf,” Thymeleaf.org, [Online]. Available: https://www.thymeleaf.org. [Accessed: 29-Sep-2025].  
+
+[13] Bootstrap, “Bootstrap,” GetBootstrap.com, [Online]. Available: https://getbootstrap.com. [Accessed: 29-Sep-2025].  
+
+[14] SQLite, “SQLite Official Documentation,” SQLite.org, [Online]. Available: https://www.sqlite.org. [Accessed: 29-Sep-2025].  
+
+[15] PostgreSQL, “PostgreSQL Official Documentation,” PostgreSQL.org, [Online]. Available: https://www.postgresql.org. [Accessed: 29-Sep-2025].  
+
+[16] Cloudinary, “Cloudinary Documentation,” Cloudinary.com, [Online]. Available: https://cloudinary.com. [Accessed: 29-Sep-2025].  
+
+[17] GitHub, “GitHub,” GitHub.com, [Online]. Available: https://github.com. [Accessed: 29-Sep-2025].  
+
+[18] JetBrains, “IntelliJ IDEA,” JetBrains.com, [Online]. Available: https://www.jetbrains.com/idea/. [Accessed: 29-Sep-2025].  
+
+[19] PostgreSQL Global Development Group, “pgAdmin,” pgAdmin.org, [Online]. Available: https://www.pgadmin.org/. [Accessed: 29-Sep-2025].  
+
+[20] Render, “Render Documentation,” Render.com, [Online]. Available: https://render.com. [Accessed: 29-Sep-2025].  
+
+[21] Railway, “Railway Documentation,” Railway.app, [Online]. Available: https://railway.app. [Accessed: 29-S
