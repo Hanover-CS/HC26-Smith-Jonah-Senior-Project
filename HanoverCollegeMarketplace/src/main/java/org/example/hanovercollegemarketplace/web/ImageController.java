@@ -3,10 +3,16 @@ package org.example.hanovercollegemarketplace.web;
 import org.example.hanovercollegemarketplace.image.ImageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Map;
+
+/**
+ * Handles image uploads.
+ * Sends the file over to ImageService and picks the right "success" or "fail" page.
+ */
 
 @Controller
 public class ImageController {
