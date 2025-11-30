@@ -5,6 +5,7 @@ import org.example.hanovercollegemarketplace.listing.ListingRepository;
 import org.example.hanovercollegemarketplace.user.User;
 import org.example.hanovercollegemarketplace.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,15 +17,18 @@ public class DataSeeder implements CommandLineRunner {
 
     private final UserRepository users;
     private final ListingRepository listings;
+    private final PasswordEncoder passwordEncoder;
 
-    public DataSeeder(UserRepository users, ListingRepository listings) {
+    public DataSeeder(UserRepository users,
+                      ListingRepository listings,
+                      PasswordEncoder passwordEncoder) {
         this.users = users;
         this.listings = listings;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
     public void run(String... args) {
-        // If we already have data, skip seeding
         if (users.count() > 0 || listings.count() > 0) {
             return;
         }
@@ -32,12 +36,11 @@ public class DataSeeder implements CommandLineRunner {
         // Fake user for demo purposes
         User demoUser = new User(
                 "demo@hanover.edu",
-                "{noop}password", // we'll replace this with a hash later
+                passwordEncoder.encode("password"),
                 "Demo User"
         );
         demoUser = users.save(demoUser);
 
-        // Some placeholder image URLs (you can swap to real ones later)
         Listing couch = new Listing(
                 "Blue couch",
                 "Comfy blue couch, slightly used. Perfect for a dorm room.",
