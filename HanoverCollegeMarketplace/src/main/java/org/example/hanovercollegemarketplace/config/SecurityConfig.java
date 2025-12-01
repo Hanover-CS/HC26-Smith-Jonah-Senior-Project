@@ -34,11 +34,11 @@ public class SecurityConfig {
                                 "/js/**",
                                 "/images/**"
                         ).permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().authenticated()   // everything else must be logged in
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
-                        .defaultSuccessUrl("/listings", true)
+                        .defaultSuccessUrl("/listings", true)  // first page after login
                         .permitAll()
                 )
                 .logout(logout -> logout

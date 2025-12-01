@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface ListingRepository extends JpaRepository<Listing, Long> {
 
-    // We'll use this later for search
     List<Listing> findByTitleContainingIgnoreCase(String titlePart);
+
+    // All listings for a specific owner
+    List<Listing> findByOwner_EmailIgnoreCase(String email);
 }

@@ -9,17 +9,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
- * Handles the main homepage.
- * Loads messages, drops in a default welcome message if nothing's there,
- * and lets people submit new ones.
+ * Legacy home stuff.
+ * Now we just use / as a redirect into the main listings page.
  */
 @Controller
 public class HomeController {
 
     private static final String DEFAULT_MSG = "Hello, Hanover Marketplace!";
-    private static final String VIEW = "index";
-    private static final String GO_HOME = "redirect:/";
-
     private final MessageRepository messages;
 
     public HomeController(MessageRepository messages) {
@@ -27,16 +23,21 @@ public class HomeController {
     }
 
     @GetMapping("/")
+    public String root() {
+        // Always send root to the listings page
+        return "redirect:/listings";
+    }
+
+    @GetMapping("/index")
     public String home(Model model) {
 
-        // If it's totally empty, toss in a welcome message
         if (messages.count() == 0) {
             messages.save(new Message(DEFAULT_MSG));
         }
 
         model.addAttribute("messages", messages.findAll());
         model.addAttribute("newMessage", new Message());
-        return VIEW;
+        return "index";
     }
 
     @PostMapping("/messages")
@@ -49,6 +50,6 @@ public class HomeController {
             }
         }
 
-        return GO_HOME;
+        return "redirect:/index";
     }
 }
