@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -55,7 +56,7 @@ public class ListingController {
 
         model.addAttribute("listings", results);
         model.addAttribute("q", query == null ? "" : query.trim());
-        model.addAttribute("mine", false); // IMPORTANT: mark this as "not mine"
+        model.addAttribute("mine", false);
 
         return LIST_VIEW;
     }
@@ -68,7 +69,7 @@ public class ListingController {
 
         model.addAttribute("listings", results);
         model.addAttribute("q", "");
-        model.addAttribute("mine", true); // IMPORTANT: mark this as "mine"
+        model.addAttribute("mine", true);
 
         return LIST_VIEW;
     }
@@ -84,6 +85,7 @@ public class ListingController {
             @RequestParam("title") String title,
             @RequestParam("description") String description,
             @RequestParam("contactInfo") String contactInfo,
+            @RequestParam("price") BigDecimal price,
             @RequestParam("file") MultipartFile file,
             Authentication auth,
             Model model
@@ -102,6 +104,7 @@ public class ListingController {
                     description.trim(),
                     imageUrl,
                     contactInfo.trim(),
+                    price,
                     owner
             );
 

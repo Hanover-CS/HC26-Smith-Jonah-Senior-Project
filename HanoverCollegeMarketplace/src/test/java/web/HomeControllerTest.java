@@ -1,4 +1,4 @@
-package org.example.hanovercollegemarketplace.web;
+package web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

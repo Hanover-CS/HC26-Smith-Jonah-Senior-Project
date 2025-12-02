@@ -3,10 +3,12 @@ package org.example.hanovercollegemarketplace.listing;
 import jakarta.persistence.*;
 import org.example.hanovercollegemarketplace.user.User;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 /**
- * One item someone is selling or giving away.
+ * One marketplace listing:
+ * title, description, image URL, contact info, price, and owner.
  */
 @Entity
 public class Listing {
@@ -29,6 +31,9 @@ public class Listing {
     @Column(nullable = false, length = 255)
     private String contactInfo;
 
+    @Column(nullable = false, precision = 10, scale = 2)
+    private BigDecimal price = BigDecimal.ZERO;
+
     @Column(nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
 
@@ -40,15 +45,27 @@ public class Listing {
         // JPA
     }
 
+    // Old constructor (kept so tests / older code still compile)
     public Listing(String title,
                    String description,
                    String imageUrl,
                    String contactInfo,
                    User owner) {
+        this(title, description, imageUrl, contactInfo, BigDecimal.ZERO, owner);
+    }
+
+    // New constructor that includes price
+    public Listing(String title,
+                   String description,
+                   String imageUrl,
+                   String contactInfo,
+                   BigDecimal price,
+                   User owner) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
         this.contactInfo = contactInfo;
+        this.price = price == null ? BigDecimal.ZERO : price;
         this.owner = owner;
     }
 
@@ -70,6 +87,10 @@ public class Listing {
 
     public String getContactInfo() {
         return contactInfo;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
     }
 
     public Instant getCreatedAt() {
@@ -94,6 +115,10 @@ public class Listing {
 
     public void setContactInfo(String contactInfo) {
         this.contactInfo = contactInfo;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price == null ? BigDecimal.ZERO : price;
     }
 
     public void setOwner(User owner) {

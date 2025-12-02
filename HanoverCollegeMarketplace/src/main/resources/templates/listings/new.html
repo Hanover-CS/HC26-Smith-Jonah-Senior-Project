@@ -8,15 +8,29 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/listings}">Hanover Marketplace</a>
+        <div class="ms-auto">
+            <form th:action="@{/logout}" method="post" class="d-inline">
+                <button type="submit" class="btn btn-outline-light btn-sm">
+                    Logout
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+
 <main class="container py-4">
 
     <header class="d-flex justify-content-between align-items-center mb-3">
         <div>
             <h1 class="h4 mb-1">Create a new listing</h1>
-            <p class="text-muted mb-0">Add a title, description, contact info, and an image.</p>
+            <p class="text-muted mb-0">Add a title, description, contact info, price, and an image.</p>
         </div>
-        <a href="/listings" class="btn btn-outline-secondary btn-sm">
+        <a th:href="@{/listings}" class="btn btn-outline-secondary btn-sm">
             ← Back to listings
         </a>
     </header>
@@ -24,7 +38,7 @@
     <form th:action="@{/listings}"
           method="post"
           enctype="multipart/form-data"
-          class="card p-3">
+          class="card p-3 shadow-sm border-0 bg-white">
 
         <div class="mb-3">
             <label for="title" class="form-label">Title *</label>
@@ -57,6 +71,21 @@
         </div>
 
         <div class="mb-3">
+            <label for="price" class="form-label">Price *</label>
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input id="price"
+                       name="price"
+                       type="number"
+                       step="0.01"
+                       min="0"
+                       class="form-control"
+                       placeholder="0.00"
+                       required>
+            </div>
+        </div>
+
+        <div class="mb-3">
             <label for="file" class="form-label">Image *</label>
             <input id="file"
                    name="file"
@@ -69,7 +98,6 @@
             </div>
         </div>
 
-        <!-- Optional place to show an error message -->
         <div class="alert alert-danger"
              th:if="${error}"
              th:text="${error}">

@@ -8,6 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 /**
  * Drops in a fake user and some sample listings
  * so the site doesn't look empty in demos.
@@ -46,6 +48,7 @@ public class DataSeeder implements CommandLineRunner {
                 "Comfy blue couch, slightly used. Perfect for a dorm room.",
                 "https://via.placeholder.com/600x400?text=Blue+Couch",
                 "demo@hanover.edu",
+                new BigDecimal("75.00"),
                 demoUser
         );
 
@@ -54,6 +57,7 @@ public class DataSeeder implements CommandLineRunner {
                 "Data Structures & Algorithms book, barely used.",
                 "https://via.placeholder.com/600x400?text=CS+Textbook",
                 "demo@hanover.edu",
+                new BigDecimal("45.00"),
                 demoUser
         );
 
@@ -62,6 +66,7 @@ public class DataSeeder implements CommandLineRunner {
                 "Mini fridge in good condition, great for snacks.",
                 "https://via.placeholder.com/600x400?text=Mini+Fridge",
                 "demo@hanover.edu",
+                new BigDecimal("120.00"),
                 demoUser
         );
 
