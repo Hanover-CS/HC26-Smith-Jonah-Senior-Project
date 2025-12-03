@@ -31,17 +31,17 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (users.count() > 0 || listings.count() > 0) {
+        if (listings.count() > 0) {
             return;
         }
 
         // Fake user for demo purposes
-        User demoUser = new User(
-                "demo@hanover.edu",
+        User demoUser1 = new User(
+                "demo1@hanover.edu",
                 passwordEncoder.encode("password"),
-                "Demo User"
+                "Demo User1"
         );
-        demoUser = users.save(demoUser);
+        demoUser1 = users.save(demoUser1);
 
         Listing couch = new Listing(
                 "Blue couch",
@@ -49,7 +49,7 @@ public class DataSeeder implements CommandLineRunner {
                 "https://via.placeholder.com/600x400?text=Blue+Couch",
                 "demo@hanover.edu",
                 new BigDecimal("75.00"),
-                demoUser
+                demoUser1
         );
 
         Listing textbook = new Listing(
@@ -58,7 +58,7 @@ public class DataSeeder implements CommandLineRunner {
                 "https://via.placeholder.com/600x400?text=CS+Textbook",
                 "demo@hanover.edu",
                 new BigDecimal("45.00"),
-                demoUser
+                demoUser1
         );
 
         Listing miniFridge = new Listing(
@@ -67,7 +67,7 @@ public class DataSeeder implements CommandLineRunner {
                 "https://via.placeholder.com/600x400?text=Mini+Fridge",
                 "demo@hanover.edu",
                 new BigDecimal("120.00"),
-                demoUser
+                demoUser1
         );
 
         listings.save(couch);
