@@ -90,6 +90,7 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3"
          th:if="${!#lists.isEmpty(listings)}">
 
+        <!-- THIS is where 'listing' gets defined -->
         <div class="col" th:each="listing : ${listings}">
             <div class="card h-100 shadow-sm border-0">
 
@@ -111,7 +112,7 @@
                     <div class="mt-auto">
                         <p class="mb-1">
                             <strong>Price:</strong>
-                            $<span th:text="${#numbers.formatDecimal(listing.price, 1, 'POINT', 2, 'NONE')}">
+                            $<span th:text="${#numbers.formatDecimal(listing.price, 1, 2)}">
                                 0.00
                             </span>
                         </p>
@@ -133,6 +134,17 @@
                                 2025-01-01
                             </span>
                         </p>
+
+                        <!-- Delete button (only on "My listings" view) -->
+                        <form th:if="${mine}"
+                              th:action="@{|/listings/${listing.id}/delete|}"
+                              method="post"
+                              class="mt-2">
+                            <button type="submit"
+                                    class="btn btn-sm btn-outline-danger w-100">
+                                Delete listing
+                            </button>
+                        </form>
                     </div>
                 </div>
 

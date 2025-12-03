@@ -8,6 +8,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,6 +21,7 @@ import java.util.List;
  * - all listings
  * - my listings
  * - new listing form + create
+ * - delete listing (owner only)
  */
 @Controller
 public class ListingController {
@@ -116,5 +118,26 @@ public class ListingController {
             model.addAttribute("error", "Upload failed: " + e.getMessage());
             return NEW_VIEW;
         }
+    }
+
+    /**
+     * Delete a listing owned by the current user.
+     * Only listings where owner.email == logged-in email will actually be removed.
+     */
+    @PostMapping("/listings/{id}/delete")
+    public String deleteListing(@PathVariable Long id, Authentication auth) {
+        var opt = listings.findById(id);
+        if (opt.isPresent() && auth != null) {
+            var listing = opt.get();
+            var owner = listing.getOwner();
+            String email = auth.getName().toLowerCase();
+
+            if (owner != null && owner.getEmail().equalsIgnoreCase(email)) {
+                listings.delete(listing);
+            }
+        }
+
+        // After deleting (or trying), go back to "My listings"
+        return "redirect:/listings/mine";
     }
 }
